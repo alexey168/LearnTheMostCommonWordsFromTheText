@@ -149,4 +149,6 @@ fabric.properties
 *.iml
 modules.xml
 .idea/misc.xml
-*.ipr
+*.ipr!/.idea/misc.xml
+!/.idea/uiDesigner.xml
+!/.idea/vcs.xml
