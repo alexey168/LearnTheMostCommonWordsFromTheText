@@ -17,7 +17,7 @@ public class FrequencyWordsFromText {
             }
 
             String str3 = book.toString().toLowerCase().replaceAll("'\\w*", " ");
-            String str = str3.toLowerCase().replaceAll("[^a-z ]", "");
+            String str = str3.toLowerCase().replaceAll("[^\w ]", "");
             List <String> arrList = new ArrayList<>(Arrays.asList(str.split(" ")));
             List <String> arrList2 = new ArrayList<>();
             for(String s : arrList){
