@@ -1,4 +1,4 @@
-package main.java.wordsfromtext;
+package wordsfromtext;
 
 
 public class Main {

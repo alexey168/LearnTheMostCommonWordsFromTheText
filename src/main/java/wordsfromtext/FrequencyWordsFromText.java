@@ -1,4 +1,4 @@
-package main.java.wordsfromtext;
+package wordsfromtext;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
