@@ -8,7 +8,7 @@ import java.util.*;
 public class FrequencyWordsFromText {
 
   public static void getWords(String nameOfFile, int minFrequency, int maxFrequency){
-
+    double start = System.currentTimeMillis();
         try(BufferedReader reader = new BufferedReader(new FileReader(String.format("src/main/resources/%s", nameOfFile)))){
             Map<String, Integer> map = new HashMap<>();
             List<String> book = new ArrayList<>();
@@ -17,8 +17,9 @@ public class FrequencyWordsFromText {
             }
 
             String str3 = book.toString().toLowerCase().replaceAll("'\\w*", " ");
-            String str = str3.toLowerCase().replaceAll("[^\\w ]", "");
-            List <String> arrList = new ArrayList<>(Arrays.asList(str.split(" ")));
+            String str = str3.replaceAll("[^\\w ]", "");
+            String str2 = str.replaceAll("[\\d]", "");
+            List <String> arrList = new ArrayList<>(Arrays.asList(str2.split(" ")));
             List <String> arrList2 = new ArrayList<>();
             for(String s : arrList){
                 String ss = s.replaceAll(" ", "");
@@ -51,7 +52,7 @@ public class FrequencyWordsFromText {
         }catch (IOException e){
             e.printStackTrace();
         }
-
+      System.out.printf("\n\nIt took %.2f seconds to process the file\n", ((double)System.currentTimeMillis() - start) / 1000);
     }
 
 
